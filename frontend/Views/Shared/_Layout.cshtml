@@ -32,21 +32,19 @@
             .link:hover {
                 color: black;
             }
+
         .sepet {
             font-family: 'Bitter', serif;
             font-size: 30px;
         }
     </style>
 </head>
+@{
+    int urunsayisi = 1;
 
+}
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar scroll</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
+    <partial name="_header" />
 
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
@@ -76,6 +74,8 @@
 
 
 
+                <div class="offcanvas-body justify-content-center mx-auto ">
+                    <img class="rounded mx-auto d-block w-75" src="~/img/Adsız tasarım.png" />
 
                     </a>
                     <ul class="dropdown-menu pt-0 pb-0" aria-labelledby="navbarScrollingDropdown">
@@ -101,15 +101,11 @@
                 </div>
             </div>
 
-        </div>
-    </nav>
 
-    <div class="container">
-        <div class="offcanvas offcanvas-end sepet" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
 
-            <div class="offcanvas-header mt-3">
-                <h3 id="offcanvasRightLabel">Sepetim</h3>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+
 
             </div>
             <div class="offcanvas-body justify-content-center mx-auto ">
@@ -124,11 +120,13 @@
                
             </div>
         </div>
+
         @RenderBody()
     </div>
-  <partial name="_footer" />
-
+    <partial name="_footer" />
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>
