@@ -1,0 +1,100 @@
+﻿
+<div class="d-flex">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 280px; background-color: #212529;">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Pos Terminalleri</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto" role="tab" aria-orientation="vertical">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <li class="nav-item">
+                    <div class="form-check">
+                        <input class="form-check-input "  type="checkbox" value="" id="flexCheckIndeterminate">
+                        <label class="form-check-label text-white" for="flexCheckIndeterminate">
+                            Indeterminate checkbox
+                        </label>
+                    </div>
+                </li>
+            }
+
+
+        <li class="mt-3" >
+            <button class="btn btn-outline-danger mt-auto w-100">
+                Filtrele
+
+            </button>
+        </li>
+
+
+        </ul>
+
+    </div>
+
+    <div class=" row flex-row ">
+        @for (int i = 0; i < 10; i++)
+        {
+
+
+
+            <div class="col-sm-12 col-xl-4 ">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+
+                        <img class="card-img-top"
+                             src="~/img/resim5.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">UrunAdı</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                UrunFiyat TL
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row justify-content-center rounded mt-4">
+                            <div class="btn px-xl-5 px-lg-4 px-md-3 px-sm-5 px-4">
+                                <div class="d-flex flex-column">
+                                    <div><i class="fa-solid fa-square-share-nodes"></i></div>
+                                    <div class="text-uppercase font-weight-bold">share</div>
+                                </div>
+                            </div>
+                            <div class="btn px-xl-5 px-lg-4 px-md-3 px-sm-5 px-4">
+                                <div class="d-flex flex-column">
+                                    <div><i class="fa-regular fa-envelope"></i></div>
+                                    <div class="text-uppercase font-weight-bold">mail</div>
+                                </div>
+                            </div>
+                            <div class="btn px-xl-5 px-lg-4 px-md-3 px-sm-5 px-4">
+                                <div class="d-flex flex-column">
+                                    <div><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text-uppercase font-weight-bold">save</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <a class="btn btn-outline-danger mt-auto" href="#">Sepete Ekle</a>
+                                <button class="btn btn-danger">Detaylı Bilgi</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

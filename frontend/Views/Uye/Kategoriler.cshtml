@@ -1,0 +1,43 @@
+﻿
+@model IEnumerable<UrunViewModel>
+
+
+@{ int x = 8;
+   
+}
+
+
+<div class="d-flex">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 280px; background-color: #212529;">
+        <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Kategoriler</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto" role="tab" aria-orientation="vertical">
+            @for (int i = 1; i <= x; i++)
+            {
+                <li class="nav-item">
+                    <button class="nav-link yanmenu text-white" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+
+                        Pos Terminal
+                    </button>
+                </li>
+}
+
+
+        </ul>
+        
+       
+    </div>
+    <div class=" row flex-row ">
+       @foreach (var nesem in Model)
+       
+
+       {
+
+        <partial name="~/Views/Urun/KucukUrun.cshtml" for="@nesem " />
+           
+        }
+    </div>
+</div>
