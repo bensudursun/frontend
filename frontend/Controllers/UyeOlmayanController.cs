@@ -9,11 +9,11 @@ using frontend.Models;
 
 namespace frontend.Controllers
 {
-    public class HomeController : Controller
+    public class UyeOlmayanController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<UyeOlmayanController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public UyeOlmayanController(ILogger<UyeOlmayanController> logger)
         {
             _logger = logger;
         }
