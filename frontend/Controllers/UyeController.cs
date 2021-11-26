@@ -11,6 +11,21 @@ namespace frontend.Controllers
         public IActionResult Hesabim()
         {
             return View();
+        }   public IActionResult GirisYap()
+        {
+            return View();
+        }  public IActionResult SifremiUnuttum()
+        {
+            return View();
+        }public IActionResult SifreLinkiGonderildi ()
+        {
+            return View();
+        }public IActionResult Urunler ()
+        {
+            return View();
+        }public IActionResult EpostaSifreDegistir ()
+        {
+            return View();
         }
     }
 }
