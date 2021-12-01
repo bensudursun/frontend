@@ -1,0 +1,327 @@
+﻿
+
+<style>
+    .sola-kaydir {
+        float: left;
+        padding: 0 200px 200px 0;
+    }
+
+    .icontabs {
+        height: 90px;
+        width: 90px;
+    }
+
+    .wrapper {
+        text-align: center;
+        margin: 100px auto;
+        width: 70%;
+        line-height: 24px;
+        overflow: hidden;
+    }
+
+    .tabs {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+        .tabs .horizontal-line {
+            height: 3px;
+            background-color: #cfcfcf;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            z-index: -1;
+        }
+
+        .tabs li {
+            position: relative;
+            width: 180px;
+            height: 200px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+            text-align: center;
+            border-radius: 20px;
+            border: solid 1px #979797;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+    li .corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        font-weight: 500;
+        color: #4a4a4a;
+        width: 40px;
+        height: 40px;
+        border-width: 0 0 1px 1px;
+        border-style: solid;
+        border-color: #979797;
+        border-radius: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tabs a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #4a4a4a;
+    }
+
+    a .description {
+        margin-bottom: 0;
+    }
+
+    .tabs li.active {
+        border-width: 1px 1px 0 1px;
+        border-radius: 20px 20px 0 0;
+        border-color: #4a4a4a;
+        margin-bottom: 0;
+        padding-bottom: 21px;
+    }
+
+        .tabs li.active .corner {
+            border-color: #4a4a4a;
+        }
+
+        .tabs li.active .first-tab-border {
+            bottom: -18px;
+            position: absolute;
+            width: 100%;
+            background-color: #ffffff;
+            height: 18px;
+            left: -1px;
+            border-left: solid 1px #4a4a4a;
+        }
+
+        .tabs li.active .tab-border {
+            bottom: -1px;
+            position: absolute;
+            width: 100%;
+            background-color: #ffffff;
+            height: 1px;
+        }
+
+        .tabs li.active .last-tab-border {
+            bottom: -18px;
+            position: absolute;
+            width: 100%;
+            background-color: #ffffff;
+            height: 18px;
+            right: -1px;
+            border-right: solid 1px #4a4a4a;
+        }
+
+    .tabgroup .tab {
+        border-radius: 20px;
+        border: solid 1px #4a4a4a;
+        padding: 0 20px 20px 20px;
+        background-color: #ffffff;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+        .tabgroup .tab .link {
+            text-align: center;
+            color: #f27a1a;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 20px;
+            border: solid 1px #f27a1a;
+            margin: 20px 20px 0 0;
+            padding: 18px 30px;
+            cursor: pointer;
+        }
+
+            .tabgroup .tab .link:hover {
+                color: #FFFFFF;
+                background-color: #00c454;
+                border-color: #00c454;
+            }
+
+        .tabgroup .tab .tumunu-gor {
+            color: #f27a1a;
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: auto;
+            align-self: center;
+            margin: 20px 0 0 auto;
+            cursor: pointer;
+        }
+</style>
+<div class="mt-5">
+
+    <div class="input-group justify-content-center align-items-start w-100 " style="">
+        <p class="sola-kaydir" style="font-size:xx-large;">Yardım</p>
+        <div class="form-outline w-50">
+            <input type="text" id="form1" placeholder="Örnek: İade kargo ücreti nedir?" class="form-control" />
+            <label class="form-label" for="form1"></label>
+        </div>
+        <button type="button" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trendyol Partner Akademi Süreci</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+
+            <li id="#tab1" class="active">
+                <div class="corner">1</div>
+                <a>
+                    <img class="icontabs"
+                         src="~/svg/forward-back.svg" alt="">
+                    <p class="description" style="color:black;">
+                        İade
+                    </p>
+                </a>
+                <div class="first-tab-border"></div>
+            </li>
+            <li id="#tab2">
+                <div class="corner">2</div>
+                <a>
+                    <img class="icontabs"
+                         src="~/svg/simpleshop.svg" alt="">
+                    <p class="description" style="color:black;">
+                        Kargo ve Teslimat
+                    </p>
+                </a>
+                <div class="tab-border"></div>
+            </li>
+            <li id="#tab3">
+                <div class="corner">3</div>
+                <a>
+                    <img class="icontabs"
+                         src="~/svg/jcartier-box.svg" alt="">
+                    <p class="description" style="color:black;">
+                        Siparişler
+                    </p>
+                </a>
+                <div class="tab-border"></div>
+            </li>
+            <li id="#tab4">
+                <div class="corner">4</div>
+                <a>
+                    <img class="icontabs"
+                         src="~/svg/Shooting-Star.svg" alt="">
+                    <p class="description" style="color:black;">
+                        Popüler Sorular
+                    </p>
+                </a>
+                <div class="tab-border"></div>
+            </li>
+            <li id="#tab5">
+                <div class="corner">5</div>
+                <a>
+                    <img class="icontabs"
+                         src="~/svg/1375181451.svg" alt="">
+                    <p class="description" style="color:black;">
+                        Bayilik
+                    </p>
+                </a>
+                <div class="last-tab-border"></div>
+            </li>
+
+        </ul>
+        <section id="first-tab-group" class="tabgroup">
+            <div id="tab1" class="tab">
+                <div class="link">İade Kargo Ücreti</div>
+                <div class="link">İade Edilemeyen Ürünler</div>
+                <div class="link">İade Politikası</div>
+                <div class="tumunu-gor">
+                    Tümünü Gör
+                    <img src="right-arrow.svg" alt="">
+                </div>
+            </div>
+            <div id="tab2" class="tab">
+                <div class="link">Kargo Firması</div>
+                <div class="link">Kargo Süresi</div>
+                <div class="link">Kargom Nerede?</div>
+
+                <div class="tumunu-gor">
+                    Tümünü Gör
+                    <img src="right-arrow.svg" alt="">
+                </div>
+            </div>
+            <div id="tab3" class="tab">
+                <div class="link">Sipariş Takibi</div>
+                <div class="link">Değişiklik Talebi</div>
+                <div class="link">İndirim Kuponları</div>
+
+                <div class="tumunu-gor">
+                    Tümünü Gör
+                    <img src="right-arrow.svg" alt="">
+                </div>
+            </div>
+            <div id="tab4" class="tab">
+                <div class="link">İade İşlemi</div>
+                <div class="link">Sipariş iptali</div>
+                <div class="link">Ücret İadesi</div>
+                <div class="link">Adres Değişikliği</div>
+                <div class="tumunu-gor">
+                    Tümünü Gör
+                    <img src="right-arrow.svg" alt="">
+                </div>
+            </div>
+            <div id="tab5" class="tab">
+                <div class="link">Bayilik için Başvuru</div>
+                <div class="link">Bayilik Anlaşması</div>
+
+                <div class="tumunu-gor">
+                    Tümünü Gör
+                    <img src="right-arrow.svg" alt="">
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+
+
+<script>
+    $('.tabgroup > div').hide();
+    $('.tabgroup > div:first-of-type').show();
+    $('.tabs li').click(function (e) {
+        e.preventDefault();
+        var $this = $(this),
+            tabgroup = '#' + $this.parents('.tabs').data('tabgroup'),
+            others = $this.closest('li').siblings(),
+            target = $this.attr('id');
+        others.removeClass('active');
+        $this.addClass('active');
+        $(tabgroup).children('div').hide();
+        $(target).show();
+
+    })
+</script>
+

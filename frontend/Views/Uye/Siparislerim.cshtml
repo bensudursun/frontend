@@ -3,39 +3,47 @@
 
 <div class="d-flex align-items-start  mt-5 input">
     <partial name="~/Views/Hesabım/HesabımSidebar.cshtml" />
-    <div class="row">
-        @foreach (var nizameddin in Model)
-        {
+    <div class="card mb-5">
+        <div class="card-body">
 
 
-            <div class="col-md-12">
-
-                <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex justify-content-between">
-                            <p class="card-text"> @nizameddin.SiparisTarihi  <span>20.11.2021</span></p>
-
-                            <p class="card-text"> Alıcı: &nbsp;<span>@nizameddin.AliciAdi</span> </p>
-                            <p class="card-text"> Tutar:&nbsp; <span style="color:#70be95">@nizameddin.SiparisTutari</span></p>
-                            <a href="#" class="btn btn-dark btnhover" style="color:white">@nizameddin.SiparisDetayı</a>
+            <h3>Siparişlerim</h3>
+            <form class="row g-3">
+                @foreach (var nizameddin in Model)
+                {
 
 
+                    <div class="col-md-12">
+
+                        <div class="card">
+
+                            <div class="card-header">
+
+                                <div class="d-flex justify-content-between">
+                                    <p class="card-text"> @nizameddin.SiparisTarihi  <span>20.11.2021</span></p>
+
+                                    <p class="card-text"> Alıcı: &nbsp;<span>@nizameddin.AliciAdi</span> </p>
+                                    <p class="card-text"> Tutar:&nbsp; <span style="color:#70be95">@nizameddin.SiparisTutari</span></p>
+                                    <a href="#" class="btn btn-dark btnhover" style="color:white">sipariş detay</a>
+
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <img style="width:70px; height:70px" src=@nizameddin.SiparisResmi />
+                                    <p class="card-text">@nizameddin.SiparisDetayı &nbsp;</p>
+
+                                </div>
+                            </div>
                         </div>
+
+
+
+
                     </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <img style="width:70px; height:70px" src="~/img/7300987800_2_4_5.jpg" />
-                            <p class="card-text">Sipariş Durumu: &nbsp;</p>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        }
+                }
+            </form>
+        </div>
     </div>
-    </div>
-
+</div>

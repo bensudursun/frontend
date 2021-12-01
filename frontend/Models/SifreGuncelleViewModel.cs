@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace frontend.Models
 {
-    public class SifreGüncelle
+    public class SifreGuncelleViewModel
     {
         public string EskiSifre { get; set; }
         public string YeniSifre { get; set; }
-        public string YenissSifreTekrar { get; set; }
+        public string YeniSifreTekrar { get; set; }
     }
 }

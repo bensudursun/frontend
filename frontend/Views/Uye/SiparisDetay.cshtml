@@ -1,0 +1,302 @@
+﻿@model IEnumerable<SiparisViewModel>
+<style>
+    body {
+        background-color: #eee;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300
+    }
+
+    .cart {
+        height: 100vh
+    }
+
+    .progresses {
+       
+        display: flex;
+        align-items: center
+    }
+
+    .line {
+        width: 76px;
+        height: 6px;
+        background: #63d19e
+    }
+
+    .steps {
+        display: flex;
+        background-color: #63d19e;
+        color: #fff;
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%
+    }
+
+    .check1 {
+        display: flex;
+        background-color: #63d19e;
+        color: #fff;
+        font-size: 17px;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 10px
+    }
+
+    .invoice-link {
+        font-size: 15px
+    }
+
+    .order-button {
+        height: 50px
+    }
+
+    .background-muted {
+        background-color: #fafafc
+    }
+    .gradient-custom-2 {
+        /* fallback for old browsers */
+        background: #a1c4fd;
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
+    }
+
+    #progressbar-1 {
+        color: #455A64;
+    }
+
+        #progressbar-1 li {
+            list-style-type: none;
+            font-size: 13px;
+            width: 33.33%;
+            float: left;
+            position: relative;
+        }
+
+        #progressbar-1 #step1:before {
+            content: "1";
+            color: #fff;
+            width: 29px;
+            margin-left: 22px;
+            padding-left: 11px;
+        }
+
+        #progressbar-1 #step2:before {
+            content: "2";
+            color: #fff;
+            width: 29px;
+        }
+
+        #progressbar-1 #step3:before {
+            content: "3";
+            color: #fff;
+            width: 29px;
+            margin-right: 22px;
+            text-align: center;
+        }
+
+        #progressbar-1 li:before {
+            line-height: 29px;
+            display: block;
+            font-size: 12px;
+            background: #455A64;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        #progressbar-1 li:after {
+            content: '';
+            width: 121%;
+            height: 2px;
+            background: #455A64;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 15px;
+            z-index: -1;
+        }
+
+        #progressbar-1 li:nth-child(2):after {
+            left: 50%
+        }
+
+        #progressbar-1 li:nth-child(1):after {
+            left: 25%;
+            width: 121%
+        }
+
+        #progressbar-1 li:nth-child(3):after {
+            left: 25%;
+            width: 50%;
+        }
+
+        #progressbar-1 li.active:before,
+        #progressbar-1 li.active:after {
+            background: #1266f1;
+        }
+
+    .card-stepper {
+        z-index: 0
+    }
+
+</style>
+<link hhref="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<div class="d-flex align-items-start  mt-5 input">
+    <partial name="~/Views/Hesabım/HesabımSidebar.cshtml" />
+    <div class="card mb-5">
+        <div class="card-body">
+
+
+
+
+
+            <div class="card mb-5">
+                <div class="card-body">
+                    <h4> Sipariş Detaylarım</h4>
+                   
+                    <div class="justify-content-center">
+                       
+
+                        <div class=" justify-content-between">
+                            <p class="card-text"> Sipariş No: &nbsp;984973498  </p>
+                            <p class="card-text"> Sipariş Tarihi: &nbsp;984973498  </p>
+
+                            <p class="card-text"> Siparis Özeti: &nbsp;<span>3 Teslimat&nbsp;, &nbsp;9Ürün</span> </p>
+                            
+
+
+
+                        </div>
+
+                        <p class=""></p>
+
+                    </div>
+                    </div>
+
+               
+            </div>
+            <form class="row g-3">
+                <div class="col-md-6 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Teslimat Bilgileri</h5>
+                        </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+
+                                    <div class=" justify-content-between">
+                                        <p class="card-text"> isim-soyisim:&nbsp; nesem didem  </p>
+
+                                        <p class="card-text"> Adres: &nbsp;<span>
+    Orhangazi Mah orhangazi mah. konuralp 442 sok. no:3/6 academia tower 1
+    Merkez 81000 / Düzce
+</span> </p>
+                                        <p class="card-text"> icon koy&nbsp; <span style="color:#70be95">sipariş adresi güncelle</span></p>
+
+
+
+                                    </div>
+                                </div>
+                                </div>
+                       
+                            </div>
+                </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Ödeme Bilgileri</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+
+                                    <div class=" justify-content-between">
+                                        <p class="card-text" style="position:absolute; right:50px;"> 44tl  </p>
+                                        <p class="card-text ">Ürün Toplamı</p>
+                                        <p class="card-text" style="position:absolute; right:50px;"> 4tl  </p>
+                                        <p class="card-text ">Kargo Tutarı</p>
+                                        <p class="card-text" style="position:absolute; right:50px;"> 4tl  </p>
+                                        <p class="card-text ">İndirim Tutarı</p>
+                                        <p class="card-text" style="position:absolute; right:50px;"> 458tl  </p>
+                                        <p class="card-text ">Toplam Tutar</p>
+
+
+                                    
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    @foreach (var aa in Model)
+                    {
+
+
+
+
+
+
+
+                        <div class="card">
+
+                            <div class="card-header">
+
+
+                                <ul id="progressbar-1" class="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
+                                    <li class="step0 active" id="step1"><span style="margin-left: 22px; margin-top: 12px;">Hazırlanıyor</span></li>
+
+                                    <li class="step0 active text-center" id="step2"> kargoya verildi <br />  <a href="#" class="card-text"> Kargo Takip</a>  </li>
+                                    <li class="step0 text-muted text-end" id="step3"><span style="margin-right: 22px;">Teslim edildi</span></li>
+                                </ul>
+
+
+                
+
+
+
+                            </div>
+                            <div class="card-body">
+
+                                <div class=" d-flex justify-content-lg-end">
+                                    <a href="#" class="btn btn-dark btnhover" style="color:white">Kolay İade  </a>&nbsp;
+                                    <a href="#" class="btn btn-dark btnhover" style="color:white">Teslimat Bilgileri</a>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <img style="width:70px; height:70px" src=@aa.SiparisResmi />
+
+                                    <div class=" justify-content-between">
+                                        <p class="card-text"> @aa.SiparisTarihi  </p>
+
+                                        <p class="card-text"> Alıcı: &nbsp;<span>@aa.AliciAdi</span> </p>
+                                        <p class="card-text"> Tutar:&nbsp; <span style="color:#70be95">@aa.SiparisTutari</span></p>
+
+
+
+                                    </div>
+                                </div>
+                                <p class=""></p>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    }
+</form>
+            <div class="col-md-12"></div>
+        </div>
+        </div>
+</div>
